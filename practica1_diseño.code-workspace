@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../../Downloads/bootstrap-5.3.8/bootstrap-5.3.8/js"
+		},
+		{
+			"path": "../../../Downloads/bootstrap-5.3.8/bootstrap-5.3.8/scss"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "practica1_diseño"
+	}
+}

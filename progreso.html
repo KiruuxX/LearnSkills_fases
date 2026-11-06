@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Tu progreso en la ruta Fullstack Developer y tus certificados.">
+  <title>LearnSkills | Mi progreso y certificados</title>
+
+  <!-- Tipografía del UI Kit: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap compilado + estilos propios (customs.css se carga después para sobrescribir) -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/customs.css">
+
+  <!-- Evita el "parpadeo" del tema: aplica el tema guardado antes de pintar -->
+  <script>
+    (function () {
+      var guardado = localStorage.getItem("ls-tema");
+      var preferido = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.setAttribute("data-bs-theme", guardado || preferido);
+    })();
+  </script>
+</head>
+
+<body>
+  <a class="visually-hidden-focusable skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- ============ CABECERA ============ -->
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg" aria-label="Navegación principal">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">LearnSkills</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+          aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+          <form class="search-form mx-lg-auto my-3 my-lg-0" role="search" id="formBuscador" action="index.html"
+            method="get">
+            <label for="buscador" class="visually-hidden">Buscar tecnología</label>
+            <input class="form-control" type="search" id="buscador" name="q" placeholder="Buscar tecnología..."
+              autocomplete="off">
+            <svg class="search-form__icon" width="16" height="16" viewBox="0 0 16 16" fill="currentColor"
+              aria-hidden="true">
+              <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+            </svg>
+          </form>
+
+          <ul class="navbar-nav ms-lg-auto align-items-lg-center gap-lg-3">
+            
+            <li class="nav-item"><a class="nav-link" href="curso.html">Mi curso</a></li>
+            <li class="nav-item"><a class="nav-link" href="progreso.html" aria-current="page">Mi progreso</a></li>
+            <li class="nav-item">
+              <button type="button" class="btn btn-theme" id="btnTema" aria-pressed="false">
+                <span id="btnTemaTexto">Modo oscuro</span>
+              </button>
+            </li>
+            <li class="nav-item">
+              <button type="button" class="nav-link nav-link--user" data-bs-toggle="modal"
+                data-bs-target="#modalAcceso">
+                Iniciar / Crear
+                <svg width="22" height="22" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                  <path fill-rule="evenodd"
+                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                </svg>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="contenido">
+
+    <!-- ============ 4. PROGRESO Y CERTIFICADOS ============ -->
+    <section id="mi-progreso" class="section" aria-labelledby="titulo-progreso">
+      <div class="container">
+        <div class="panel">
+          <h1 id="titulo-progreso" class="page-title text-center">Tu progreso en la Ruta Fullstack Developer</h1>
+          <!-- <div class="progress-wrap">
+            <div class="progress" role="progressbar" aria-label="Progreso de la ruta Fullstack Developer"
+                 aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar" style="width: 60%"></div>
+            </div>
+            <span class="progress-wrap__valor">60% completado</span>
+          </div> -->
+
+         <div class="progress-wrap">
+  <div class="progress" role="progressbar" aria-label="Progreso de la ruta Fullstack Developer"
+       aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar" style="width: 60%"></div>
+  </div>
+  <span class="progress-wrap__valor">60% completado</span>
+</div>
+        </div>
+
+        <h2 class="h3 mt-5 mb-3">Certificados obtenidos</h2>
+        <div class="row g-4">
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="cert-card">
+              <h3>Diploma en JavaScript ES6</h3>
+              <button type="button" class="btn btn-primary btn-sm btn-download">Descargar PDF</button>
+            </article>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="cert-card">
+              <h3>Diploma en HTML y CSS avanzado</h3>
+              <button type="button" class="btn btn-primary btn-sm btn-download">Descargar PDF</button>
+            </article>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="cert-card">
+              <h3>Diploma en PostgreSQL</h3>
+              <button type="button" class="btn btn-primary btn-sm btn-download">Descargar PDF</button>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="mb-0">&copy; 2026 LearnSkills · Made by Elena Chiru</p>
+    </div>
+  </footer>
+
+  <!-- ============ MODAL: INICIAR SESIÓN / REGISTRARSE ============ -->
+  <div class="modal fade" id="modalAcceso" tabindex="-1" role="dialog" aria-labelledby="tituloModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title h4" id="tituloModal">Accede a LearnSkills</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <ul class="nav nav-tabs mb-3" id="tabsAcceso" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="tab-login" data-bs-toggle="tab" data-bs-target="#panel-login"
+                type="button" role="tab" aria-controls="panel-login" aria-selected="true">Iniciar sesión</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="tab-registro" data-bs-toggle="tab" data-bs-target="#panel-registro"
+                type="button" role="tab" aria-controls="panel-registro" aria-selected="false">Crear cuenta</button>
+            </li>
+          </ul>
+
+          <div class="tab-content">
+            <!-- LOGIN -->
+            <div class="tab-pane fade show active" id="panel-login" role="tabpanel" aria-labelledby="tab-login"
+              tabindex="0">
+              <form class="needs-validation" id="formLogin" novalidate>
+                <div class="mb-3">
+                  <label for="loginEmail" class="form-label">Correo electrónico</label>
+                  <input type="email" class="form-control" id="loginEmail" autocomplete="email" required>
+                  <div class="invalid-feedback">Introduce un correo electrónico válido.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="loginPass" class="form-label">Contraseña</label>
+                  <input type="password" class="form-control" id="loginPass" autocomplete="current-password"
+                    minlength="8" required>
+                  <div class="invalid-feedback">La contraseña debe tener al menos 8 caracteres.</div>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Iniciar sesión</button>
+                <div class="alert alert-success mt-3 d-none" role="alert" id="okLogin">¡Sesión iniciada correctamente!
+                </div>
+              </form>
+            </div>
+
+            <!-- REGISTRO -->
+            <div class="tab-pane fade" id="panel-registro" role="tabpanel" aria-labelledby="tab-registro" tabindex="0">
+              <form class="needs-validation" id="formRegistro" novalidate>
+                <div class="mb-3">
+                  <label for="regNombre" class="form-label">Nombre</label>
+                  <input type="text" class="form-control" id="regNombre" autocomplete="name" minlength="2" required>
+                  <div class="invalid-feedback">Escribe tu nombre (mínimo 2 caracteres).</div>
+                </div>
+                <div class="mb-3">
+                  <label for="regEmail" class="form-label">Correo electrónico</label>
+                  <input type="email" class="form-control" id="regEmail" autocomplete="email" required>
+                  <div class="invalid-feedback">Introduce un correo electrónico válido.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="regPass" class="form-label">Contraseña</label>
+                  <input type="password" class="form-control" id="regPass" autocomplete="new-password" minlength="8"
+                    pattern="(?=.*[0-9])(?=.*[A-Za-z]).{8,}" required>
+                  <div class="invalid-feedback">Mínimo 8 caracteres, con letras y números.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="regPass2" class="form-label">Repite la contraseña</label>
+                  <input type="password" class="form-control" id="regPass2" autocomplete="new-password" required>
+                  <div class="invalid-feedback" id="errorPass2">Las contraseñas no coinciden.</div>
+                </div>
+                <div class="form-check mb-3">
+                  <input class="form-check-input" type="checkbox" id="regTerminos" required>
+                  <label class="form-check-label" for="regTerminos">Acepto los términos y condiciones</label>
+                  <div class="invalid-feedback">Debes aceptar los términos para continuar.</div>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Crear cuenta</button>
+                <div class="alert alert-success mt-3 d-none" role="alert" id="okRegistro">¡Cuenta creada correctamente!
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
